@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+.map-background {
+    position: relative;
+    text-align: center;
+}
+
+.structure {
+    position: absolute;
+    width:250px;
+    height:250px;
+}
+.structure img {
+    width:250px;
+    height:250px;
+    transform:scale(1.0);
+}
+.structure-img {
+    text-align: center;
+}
+.structure a {
+    transform:scale(1.0);
+}
+
+.student {
+    top: 570px;
+    left: 650px;
+}
+.ai {
+    top: 570px;
+    left: 1340px;
+}
+.gunja {
+    top: 290px;
+    left: 220px;
+}
+.library {
+    top: 170px;
+    left: 1120px;
+}
+
+.pin {
+    text-align: center;
+    visibility: hidden;
+}
+.pin img{
+    width:80px;
+    height:80px;
+}
+
+.filter_area {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+}
+.filter_list {
+    list-style-position: initial;
+    list-style-image: initial;
+    list-style-type: none;
+}
+.filter_item {
+    display: inline-block;
+}
+.filter_item img {
+    width:20px;
+    height:20px;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sejong-campus-guide</title>
+    <link rel="stylesheet" href="../css/index.css" type="text/css">
+</head>
+<body>
+    <div class="main-wrap">
+        <header>
+            <div class="logo">
+                <a>
+                    <img width="186" height="38" src="../image/logo.png">
+                </a>
+            </div>
+        </header>
+        <main>
+            <div class="main-content">
+                <div class="map">
+                    <div class="map-background">
+                        <img src="../image/map-background.png">
+                    </div>
+
+                    <div class="structure-group">
+                        <div class="structure student">
+                            <div class="pin cafe cutlery">
+                                <img src="../image/map_pin_small.png">
+                            </div>
+                            <div class="structure-img">
+                                <a href="./student.html">
+                                    <img alt="" src="../image/student.png">
+                                </a>
+                                <p>학생회관</p>
+                            </div>
+                        </div>
+                        <div class="structure ai">
+                            <div class="pin store">
+                                <img src="../image/map_pin_small.png">
+                            </div>
+                            <div class="structure-img">
+                                <a href="./ai.html">
+                                    <img alt="" src="../image/ai.png">
+                                </a>
+                                <p>대양AI센터</p>
+                            </div>
+                        </div>
+                        <div class="structure gunja">
+                            <div class="pin cutlery store printer">
+                                <img src="../image/map_pin_small.png">
+                            </div>
+                            <div class="structure-img">
+                                <a href="./gunja.html">
+                                    <img alt="" src="../image/gunja.png">
+                                </a>
+                                <p>군자관</p>
+                            </div>
+                        </div>
+                        <div class="structure library">
+                            <div class="pin cafe printer">
+                                <img src="../image/map_pin_small.png">
+                            </div>
+                            <div class="structure-img">
+                                <a href="./library.html">
+                                    <img alt="" src="../image/library.png">
+                                </a>
+                                <p>학술정보원</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter_area">
+                        <ul class="filter_list">
+                            <li class="filter_item cafe">
+                                <button type="button">
+                                    <img src="../image/coffee.png"> 카페
+                                </button>
+                            </li>
+                            <li class="filter_item cutlery">
+                                <button type="button">
+                                    <img src="../image/cutlery.png"> 학생 식당
+                                </button>
+                            </li>
+                            <li class="filter_item store">
+                                <button type="button">
+                                    <img  src="../image/store.png"> 편의점
+                                </button>
+                            </li>
+                            <li class="filter_item printer">
+                                <button type="button">
+                                    <img src="../image/printer.png"> 프린터
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function () {
+            //카페,식당,편의점,프린터 아이콘 클릭
+            $('.filter_item').on('click', function () {
+                var type = '.pin.' + this.className.split(' ')[1];
+                $('.pin').css('visibility', 'hidden');
+                $(type).css('visibility', 'visible');
+            });
+
+            //건물 마우스 엔터
+            $('.structure a img').on('mouseenter', function() {
+                $(this).css('transform', 'scale(1.2)');
+            });
+
+            //건물 마우스 리브
+            $('.structure a img').on('mouseleave', function() {
+                $(this).css('transform', 'scale(1)');
+            });
+
+        });
+    </script>
+</body>
+</html>
