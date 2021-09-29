@@ -8,64 +8,45 @@
 <body>
     <div class="main-wrap">
         <header>
-            <div class="logo">
-                <a href="#" onClick="top.location='javascript:location.reload()'">
-                    <img width="186" height="38" src="../image/logo.png">
-                    //195 47
-                </a>
+            <div class="logo-wrap">
+                <div class="logo">
+                    <a href="#" onClick="top.location='javascript:location.reload()'">
+                        <img width="195" height="47" src="../image/logo.png">
+                    </a>
+                </div>
             </div>
         </header>
         <main>
             <div class="main-content">
                 <div class="map">
                     <div class="map-background">
-                        <img src="../image/map-background.png">
+                        <img width="1800" height="850"src="../image/ground.png">
                     </div>
 
-                    <div class="structure-group">
+                    <div class="structures">
                         <div class="structure student">
-                            <div class="pin cafe cutlery">
-                                <img src="../image/map_pin_small.png">
-                            </div>
-                            <div class="structure-img">
-                                <a href="./student.html">
-                                    <img src="../image/student.png">
-                                </a>
-                                <p>학생회관</p>
-                            </div>
+                            <a class="structure-img" href="./student.html">
+                                <img width="200" height="176" src="../image/hakgwan.png">
+                            </a>
+                            <p class="structure-name">학생회관</p>
                         </div>
                         <div class="structure ai">
-                            <div class="pin store">
-                                <img src="../image/map_pin_small.png">
-                            </div>
-                            <div class="structure-img">
-                                <a href="./ai.html">
-                                    <img src="../image/ai.png">
-                                </a>
-                                <p>대양AI센터</p>
-                            </div>
+                            <a class="structure-img" href="./ai.html">
+                                <img width="200" height="246"  src="../image/innocen.png">
+                            </a>
+                            <p class="structure-name">대양AI센터</p>
                         </div>
                         <div class="structure gunja">
-                            <div class="pin cutlery store printer">
-                                <img src="../image/map_pin_small.png">
-                            </div>
-                            <div class="structure-img">
-                                <a href="./gunja.html">
-                                    <img src="../image/gunja.png">
-                                </a>
-                                <p>군자관</p>
-                            </div>
+                            <a class="structure-img" href="./gunja.html">
+                                <img width="200" height="185" src="../image/Gunja.png">
+                            </a>
+                            <p class="structure-name">군자관</p>
                         </div>
                         <div class="structure library">
-                            <div class="pin cafe printer">
-                                <img src="../image/map_pin_small.png">
-                            </div>
-                            <div class="structure-img">
-                                <a href="./library.html">
-                                    <img src="../image/library.png">
-                                </a>
-                                <p>학술정보원</p>
-                            </div>
+                            <a class="structure-img" href="./library.html">
+                                <img width="162" height="200" src="../image/hakjeong.png">
+                            </a>
+                            <p class="structure-name">학술정보원</p>
                         </div>
                     </div>
 
@@ -94,6 +75,21 @@
                         </ul>
                     </div>
 
+                    <div class="pin-group">
+                        <div class="student pin cafe cutlery">
+                            <img src="../image/map_pin_small.png">
+                        </div>
+                        <div class="ai pin store cafe">
+                            <img src="../image/map_pin_small.png">
+                        </div>
+                        <div class="gunja pin cutlery store printer">
+                            <img src="../image/map_pin_small.png">
+                        </div>
+                        <div class="library pin cafe printer">
+                            <img src="../image/map_pin_small.png">
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </main>
@@ -107,7 +103,7 @@
         $(document).ready(function () {
             //카페,식당,편의점,프린터 아이콘 클릭
             $('.filter_item').on('click', function () {
-                var type = '.pin.' + this.className.split(' ')[1];
+                var type = '.pin-group .' + this.className.split(' ')[1];
                 $('.pin').css('visibility', 'hidden');
                 $(type).css('visibility', 'visible');
             });

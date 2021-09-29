@@ -1,62 +1,92 @@
 @charset "utf-8";
 
-.map-background {
+header {
+    margin-bottom: 8px;
+}
+.logo-wrap {
+    width: 100%;
+    text-align: center;
+}
+.logo {
+    display: inline-block;
+}
+
+.main-content {
+    text-align: center;
+}
+.map {
+    display: inline-block;
     position: relative;
-    text-align: center;
+    width: 1800px;
+    height: 850px;
 }
-
-.structure {
+.map-background {
     position: absolute;
-    width:250px;
-    height:250px;
-}
-.structure img {
-    width:250px;
-    height:250px;
-    transform:scale(1.0);
-}
-.structure-img {
-    text-align: center;
-}
-.structure a {
-    transform:scale(1.0);
+    width: 100%;
+    height: 100%;
 }
 
-.student {
-    top: 570px;
-    left: 650px;
+.structure{
+    position: absolute;
 }
-.ai {
-    top: 570px;
-    left: 1340px;
+.structures .student {
+    top: 625px;
+    left: 825px;
 }
-.gunja {
-    top: 290px;
-    left: 220px;
+.structures .student {
+    top: 630px;
+    left: 815px;
 }
-.library {
-    top: 170px;
-    left: 1120px;
+.structures .ai {
+    top: 250px;
+    left: 1345px;
+}
+.structures .gunja {
+    top: 330px;
+    left: 230px;
+}
+.structures .library {
+    top: 120px;
+    left: 700px;
+}
+.structure p {
+    margin:0px;
+    z-index: 1000;
 }
 
 .pin {
-    text-align: center;
+    position: absolute;
     visibility: hidden;
 }
+.pin-group .student {
+    top: 585px;
+    left: 860px;
+}
+.pin-group .ai {
+    top: 175px;
+    left: 1415px;
+}
+.pin-group .gunja {
+    top: 285px;
+    left: 275px;
+}
+.pin-group .library {
+    top: 45px;
+    left: 760px;
+}
 .pin img{
-    width:80px;
-    height:80px;
+    width:60px;
+    height:60px;
 }
 
 .filter_area {
     position: absolute;
-    top: 60px;
-    left: 60px;
+    top: 15px;
+    left: 15px;
 }
 .filter_list {
-    list-style-position: initial;
-    list-style-image: initial;
-    list-style-type: none;
+    margin: 1px;
+    padding: 1px;
 }
 .filter_item {
     display: inline-block;
