@@ -25,25 +25,25 @@
 
                     <div class="structures">
                         <div class="structure student">
-                            <a class="structure-img" href="./student.html">
+                            <a class="structure-img">
                                 <img width="200" height="176" src="../image/hakgwan.png">
                             </a>
                             <p class="structure-name">학생회관</p>
                         </div>
                         <div class="structure ai">
-                            <a class="structure-img" href="./ai.html">
+                            <a class="structure-img">
                                 <img width="200" height="246"  src="../image/innocen.png">
                             </a>
                             <p class="structure-name">대양AI센터</p>
                         </div>
                         <div class="structure gunja">
-                            <a class="structure-img" href="./gunja.html">
+                            <a class="structure-img">
                                 <img width="200" height="185" src="../image/Gunja.png">
                             </a>
                             <p class="structure-name">군자관</p>
                         </div>
                         <div class="structure library">
-                            <a class="structure-img" href="./library.html">
+                            <a class="structure-img">
                                 <img width="162" height="200" src="../image/hakjeong.png">
                             </a>
                             <p class="structure-name">학술정보원</p>
@@ -64,7 +64,7 @@
                             </li>
                             <li class="filter_item store">
                                 <button type="button">
-                                    <img  src="../image/new_grocerystore.png"> 편의점
+                                    <img  src="../image/new_grocery-store.png"> 편의점
                                 </button>
                             </li>
                             <li class="filter_item printer">
@@ -110,14 +110,24 @@
 
             //건물 마우스 엔터
             $('.structure a img').on('mouseenter', function() {
-                $(this).css('transform', 'scale(1.2)');
+                $(this).parent().parent().css('transform', 'scale(1.2)');
             });
 
             //건물 마우스 리브
             $('.structure a img').on('mouseleave', function() {
-                $(this).css('transform', 'scale(1)');
+                $(this).parent().parent().css('transform', 'scale(1)');
             });
 
+            //건물 홈페이지로 이동
+            $('.structure-img').on('click', function() {
+                var structureName = $(this).parent().attr('class').split(' ')[1];
+
+                if ($ ('.pin-group .' + structureName).css('visibility') == 'visible') {
+                    location.href = '/campus-guide-system/campus-guide-system/'+ structureName + '/detail_page6.html';
+                } else {
+                    location.href = '/campus-guide-system/campus-guide-system/'+ structureName + '/detail_page.html';
+                }
+            });
         });
     </script>
 </body>
