@@ -47,29 +47,23 @@ height: 100%;
 object-fit: cover;
 }
 
-.box {
+/* .box {
 position  : absolute;
-left : 20%;
-top : 140px;
+left : 25%;
+top : 200px;
 width : 900px; 
 height :550px ; 
-}
+} */
+.box {
+    position  : absolute;
+    left : 15%;
+    top : 150px;
+    /* width : 900px; 
+    height :550px ;  */
+    width : 70%;
+    height : 75%;
+    }
 .swiper-slide{
 position : relative;
-}
-
-.floortxt{
-z-index :1;
-text-align: left;
-margin-left : 10px;
-}
-
-.floorimg{
-position : absolute;
-opacity: 0.3;
-z-index:2;
-}
-h1{
-text-align: center;
 }
 
