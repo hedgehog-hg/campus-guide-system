@@ -59,8 +59,8 @@
                             </ul>
                         </div>
                         <div class="input-group">
-                            <input type="text" placeholder="예) 센107">
-                            <button class="btn btn-default" type="submit"><i class="fa fa-search"></i>
+                            <input id="searchBar" type="text" placeholder="예) 센107">
+                            <button name="search" class="btn btn-default" type="submit"><i class="fa fa-search"></i>
                                 <span class="input-group-btn">
                                     <img src="../image/search.png">
                                 </span>
@@ -126,7 +126,24 @@
             $('.pin').css('visibility', 'hidden');
             $(type).css('visibility', 'visible');
         });
-
+        //검색 버튼 클릭
+        $("button[name='search']").on('click', function () {
+            var searchTerm = document.getElementById("searchBar").value;
+            var buildingName = String(searchTerm)[0];
+            $('.pin').css('visibility', 'hidden');
+            if(buildingName == '센') {
+                $('.pin-group .ai').css('visibility', 'visible');
+            }
+            else if(buildingName == '군') {
+                $('.pin-group .gunja').css('visibility', 'visible');
+            }
+            else if(buildingName == '학') {
+                $('.pin-group .student').css('visibility', 'visible');
+            }
+            else if(buildingName == '동') {
+                $('.pin-group .library').css('visibility', 'visible');
+            }
+        });
         //건물 마우스 엔터
         $('.structure a img').on('mouseenter', function () {
             var sturctureName = '.' + $(this).parent().parent().attr('class').split(' ')[1];
