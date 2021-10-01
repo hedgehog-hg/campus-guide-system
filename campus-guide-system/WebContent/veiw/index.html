@@ -108,9 +108,12 @@
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script>
     $(document).ready(function () {
+        var pin_type = null;
+
         //카페,식당,편의점,프린터 아이콘 클릭
         $('.filter_item').on('click', function () {
-            var type = '.pin-group .' + this.className.split(' ')[1];
+            pin_type = this.className.split(' ')[1];
+            var type = '.pin-group .' + pin_type;
             $('.pin').css('visibility', 'hidden');
             $(type).css('visibility', 'visible');
         });
@@ -130,9 +133,9 @@
             var structureName = $(this).parent().attr('class').split(' ')[1];
 
             if ($('.pin-group .' + structureName).css('visibility') == 'visible') {
-                location.href = '/campus-guide-system/campus-guide-system/' + structureName + '/detail_page6.html';
+                location.href = '/campus-guide-system/campus-guide-system/' + structureName + '/' + structureName + '_' + pin_type + '.html';
             } else {
-                location.href = '/campus-guide-system/campus-guide-system/' + structureName + '/detail_page.html';
+                location.href = '/campus-guide-system/campus-guide-system/' + structureName + '/' + structureName + '_main.html';
             }
         });
     });
