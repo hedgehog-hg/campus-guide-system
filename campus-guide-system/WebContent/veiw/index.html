@@ -144,9 +144,10 @@
             var structureName = $(this).parent().attr('class').split(' ')[1];
 
             if ($('.pin-group .' + structureName).css('visibility') == 'visible') {
-                location.href = '/campus-guide-system-main/campus-guide-system/' + structureName + '/' + structureName + '_' + pin_type + '.html';
+                location.href = '../../' + structureName + '/' + structureName + '_' + pin_type + '.html';
             } else {
-                location.href = '/campus-guide-system-main/campus-guide-system/' + structureName + '/' + structureName + '_main.html';
+                location.href = '../../' + structureName + '/' + structureName + '_main.html';
+
             }
         });
     });
