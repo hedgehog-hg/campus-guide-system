@@ -29,7 +29,7 @@ html, body{
     width : 100%;
     font-size : 0.8em;
     min-height: 100%;
-    padding:20px 60px; 
+    padding:20px 150px; 
     margin-bottom: 80px;
 }
 
@@ -71,6 +71,21 @@ p{
     margin-top:10px; 
     font-size : 15px;
     text-align: center;
+    border: 1px solid;
+    width :100%;
+    border-collapse: collapse;
+    
+}
+th,td{
+    border-left:1px dashed;
+    border-bottom: 1px solid;
+    padding : 5px;
+}
+
+h6{
+    padding : 10px 15px;
+    background-color: #ececec;
+    
 }
 /* footer 영역 */
 .footer{
