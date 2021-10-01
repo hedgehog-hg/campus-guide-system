@@ -72,6 +72,7 @@ main {
     /*display: inline-block;*/
     /*vertical-align: middle;*/
     text-align: left;
+    float:left;
 }
 .logo img {
     width: 100%;
@@ -79,6 +80,58 @@ main {
 }
 .map-header {
     z-index: 1;
+}
+.map-header-right {
+    position: relative;
+    text-align: right;
+    float:right;
+    width:40%;
+    height:6%;
+    /*display: inline-block;*/
+}
+.input-group {
+    width:50%;
+    height:100%;
+    text-align: right;
+    float:right;
+}
+.input-group input {
+    width:80%;
+    height:100%;
+    float:left;
+    margin:0;
+    padding:0;
+    border: none;
+    font-size: 17px;
+}
+.btn, .btn-default {
+    width:20%;
+    height:100%;
+    float:right;
+    magin:0;
+    padding:0;
+    border-width: 0;
+}
+.btn-default :hover {
+    background: #ccc;
+}
+.btn :hover {
+    background: #ccc;
+}
+.input-group-btn :hover {
+    background: #ccc;
+}
+
+.input-group-btn {
+    width:100%;
+    height:100%;
+    /*float:right;*/
+    /*margin:0px;*/
+}
+.btn {
+    /*padding: 1%;*/
+    border: none;
+    cursor: pointer;
 }
 
 /*.filter_area {*/
@@ -101,19 +154,20 @@ main {
 /*}*/
 
 .filter_area {
-    position: absolute;
-    top: 9%;
-    left: 1%;
-    width: 20%;
-    height: 10%;
+    /*position: absolute;*/
+    /*top: 9%;*/
+    /*left: 1%;*/
+    width: 50%;
+    height: 100%;
     z-index: 1;
-    text-align: left;
+    text-align: center;
+    float:left;
 }
 .filter_list {
     /*width: 10%;*/
     /*height: 12%;*/
-    margin: 1px;
-    padding: 1px;
+    margin: 0;
+    padding: 0;
 }
 .filter_item {
     width: 15%;
@@ -196,21 +250,21 @@ main {
     top: 5%;
     left: 43%;
 }
+
+
 .pin img{
     width: 100%;
     height: auto;
 }
-.input-group input[type=text] {
-    font-size: 17px;
-    padding: 4px;
-    border: none;
-    margin-right: 0px;
+.pin iframe {
+    width:100%;
+    height:auto;
+    border:0;
 }
-.btn {
-    padding: 4px;
-    border: none;
-    cursor: pointer;
+.giphy-embed{
+    width:100%;
+    height:auto;
+    border:0;
 }
-.input-group .input-group-btn :hover{
-    background: #ccc;
-}
+
+

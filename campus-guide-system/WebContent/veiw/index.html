@@ -29,43 +29,44 @@
                             <img src="../image/logo.png">
                         </a>
                     </div>
-                    <div class="filter_area">
-                        <ul class="filter_list">
-                            <li class="filter_item cafe">
-                                <button type="button">
-                                    <img src="../image/new_coffee.png">
-<!--                                    <p>카페</p>-->
-                                </button>
-                            </li>
-                            <li class="filter_item restaurant">
-                                <button type="button">
-                                    <img src="../image/new_fork.png">
-<!--                                    <p>학생 식당</p>-->
-                                </button>
-                            </li>
-                            <li class="filter_item store">
-                                <button type="button">
-                                    <img src="../image/new_grocery-store.png">
-<!--                                    <p>편의점</p>-->
-                                </button>
-                            </li>
-                            <li class="filter_item printer">
-                                <button type="button">
-                                    <img src="../image/new_printer.png">
-<!--                                    <p>프린터</p>-->
-                                </button>
-                            </li>
-                        </ul>
+                    <div class="map-header-right">
+                        <div class="filter_area">
+                            <ul class="filter_list">
+                                <li class="filter_item cafe">
+                                    <button type="button">
+                                        <img src="../image/new_coffee.png">
+                                        <!--                                    <p>카페</p>-->
+                                    </button>
+                                </li>
+                                <li class="filter_item restaurant">
+                                    <button type="button">
+                                        <img src="../image/new_fork.png">
+                                        <!--                                    <p>학생 식당</p>-->
+                                    </button>
+                                </li>
+                                <li class="filter_item store">
+                                    <button type="button">
+                                        <img src="../image/new_grocery-store.png">
+                                        <!--                                    <p>편의점</p>-->
+                                    </button>
+                                </li>
+                                <li class="filter_item print">
+                                    <button type="button">
+                                        <img src="../image/new_printer.png">
+                                        <!--                                    <p>프린터</p>-->
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
                         <div class="input-group">
                             <input type="text" placeholder="예) 센107">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default" type="submit"><i class="fa fa-search"></i>
-                                    <img width="15" height="14" src="../image/search.png">
-                                </button>
-                            </span>
+                            <button class="btn btn-default" type="submit"><i class="fa fa-search"></i>
+                                <span class="input-group-btn">
+                                    <img src="../image/search.png">
+                                </span>
+                            </button>
                         </div>
                     </div>
-                    
                 </div>
                 <div class="structures" width="1800" height="850">
                     <div class="structure student">
@@ -97,10 +98,10 @@
                     <div class="ai pin store cafe">
                         <img src="../image/map_pin_small.png">
                     </div>
-                    <div class="gunja pin restaurant store printer">
+                    <div class="gunja pin restaurant store print">
                         <img src="../image/map_pin_small.png">
                     </div>
-                    <div class="library pin cafe printer">
+                    <div class="library pin cafe print">
                         <img src="../image/map_pin_small.png">
                     </div>
                 </div>
@@ -128,12 +129,14 @@
 
         //건물 마우스 엔터
         $('.structure a img').on('mouseenter', function () {
-            $(this).parent().parent().css('transform', 'scale(1.2)');
+            var sturctureName = '.' + $(this).parent().parent().attr('class').split(' ')[1];
+            $(sturctureName).css('transform', 'scale(1.2)');
         });
 
         //건물 마우스 리브
         $('.structure a img').on('mouseleave', function () {
-            $(this).parent().parent().css('transform', 'scale(1)');
+            var sturctureName = '.' + $(this).parent().parent().attr('class').split(' ')[1];
+            $(sturctureName).css('transform', 'scale(1)');
         });
 
         //건물 홈페이지로 이동
@@ -141,9 +144,9 @@
             var structureName = $(this).parent().attr('class').split(' ')[1];
 
             if ($('.pin-group .' + structureName).css('visibility') == 'visible') {
-                location.href = '/campus-guide-system/campus-guide-system/' + structureName + '/' + structureName + '_' + pin_type + '.html';
+                location.href = '/campus-guide-system-main/campus-guide-system/' + structureName + '/' + structureName + '_' + pin_type + '.html';
             } else {
-                location.href = '/campus-guide-system/campus-guide-system/' + structureName + '/' + structureName + '_main.html';
+                location.href = '/campus-guide-system-main/campus-guide-system/' + structureName + '/' + structureName + '_main.html';
             }
         });
     });
